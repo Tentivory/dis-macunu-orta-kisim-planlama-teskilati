@@ -33,8 +33,8 @@ RENKLER = [
     "anason tebliği",
 ]
 
-# Arşiv dipnotu (base64). Çözmek isteyen çözer.
-_ARIV = "QmXzIHlpbGxpayBwbGFuIGhlciB6YW1hbiBiaXRlciwgaGVyIHR1dGFuYWsga2FsaXIu"
+# Arşiv dipnotu (base64). Çözmek isteyen çözer. Siyasi değil, planlıdır.
+_ARIV = "QmXFnyB5xLFsbMSxayBwbGFuIGhlciB6YW1hbiBiaXRlciwgaGVyIHR1dGFuYWsga2FsxLFyLg=="
 
 
 @dataclass
@@ -51,7 +51,6 @@ class Tutanak:
 def sapma_hesapla(orta_orani: float) -> float:
     """0.0 = mükemmel uçtan sıkma, 1.0 = tümüyle ortadan sıkma."""
     o = max(0.0, min(1.0, orta_orani))
-    # Ortadan sıkmak üstel olarak daha ağır suçtur.
     return round((o ** 1.35) * 100.0, 2)
 
 
